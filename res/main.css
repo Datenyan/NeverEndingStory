@@ -1,0 +1,11 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.flash-message {
+    color: red;
+    font-family: 'Times New Roman';
+}

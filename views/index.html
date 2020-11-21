@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>The Never-Ending Story</title>
+    <link href="main.css" rel="stylesheet" type="text/css"></head>
+<body>
+    <%# Handle flash messages %>
+    <% if ( flash.length > 0 ) { %>
+        <div class="flash-message"> <%= flash %></div>
+    <% } %>
+    <div class="header">
+        <h1>The Literally Never-Ending Story</h1>
+    </div>
+    <div class="content">
+        <p>The current story so far: <em><%= story %></em></p>
+        <hr />
+        <h3>Suggest a word!</h3>
+        <form action="/suggestword" autocomplete="off" method="POST">
+            <input type="text" name="word" value="">
+            <input type="submit" value="Submit">
+        </form>
+        <hr />
+        <h3>Suggested Words</h3>
+        <% for (var i = 0; i < words.length; i++) { %>
+        <p class="suggestedWord"><%= words[i].name %> <%= words[i].votes %></p>
+        <% } %>
+    </div>
+</body>
