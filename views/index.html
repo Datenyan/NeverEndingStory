@@ -5,7 +5,9 @@
 <body>
     <%# Handle flash messages %>
     <% if ( flash.length > 0 ) { %>
-        <div class="flash-message"> <%= flash %></div>
+        <% for (var i = 0; i < flash.length; i++) { %>
+        <div class="flash-message"> <%= flash[i] %></div>
+        <% } %>
     <% } %>
     <div class="header">
         <h1>The Literally Never-Ending Story</h1>
