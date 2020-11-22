@@ -20,8 +20,19 @@
         </form>
         <hr />
         <h3>Suggested Words</h3>
-        <% for (var i = 0; i < words.length; i++) { %>
-        <p class="suggestedWord"><%= words[i].name %> <%= words[i].votes %></p>
-        <% } %>
+        <table class="suggestedWordTable">
+            <thead>
+                <th>Word</th>
+                <th>Votes</th>
+            </thead>
+            <tbody>
+                <% for (var i = 0; i < words.length; i++) { %>
+                <tr>
+                    <td><p class="suggestedWord"><%= words[i].name %></p></td>
+                    <td><p class="SuggestedWordVotes"><%= words[i].votes %></p></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
     </div>
 </body>
