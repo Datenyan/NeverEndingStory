@@ -104,4 +104,9 @@ router.post('/suggestword', function(req, res) {
     res.redirect('/');
 });
 
+// POST Request for voting on an existing word
+router.post('/voteWord', function(req, res) {
+
+});
+
 module.exports = router;
